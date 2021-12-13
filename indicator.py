@@ -45,5 +45,3 @@ def stocktwits_indicator():
         print('The market is ' + m + ':', round(indicator, 3), end='')
 
         time.sleep(1)
-
-stocktwits_indicator()
