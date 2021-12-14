@@ -9,7 +9,7 @@ stocktwits_indicator()
 ```
 ### OUTPUT
 ```
-The market is bullish: 4.253
+4.253
 ```
 
 ## The Code:
@@ -45,20 +45,11 @@ def stocktwits_indicator():
                     else:
                         bull += 1
 
-        # In case "bull" divides by zero
-        if bear == 0:
-            bear = 1
-
         # Indicator
-        indicator = (bull/bear)
-
-        if indicator > 0:
-            m = 'bullish'
-        else:
-            m = 'bearish'
+        indicator = round((bull/bear), 3)
 
         print(end='\r')
-        print('The market is ' + m + ':', round(indicator, 3), end='')
+        print(indicator, end='')
 
         time.sleep(1)
 ```
